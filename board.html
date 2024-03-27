@@ -3,7 +3,9 @@
   <body>
     <h2>🔥Emoji keyboard🔥</h2>
     <div class="main">
-      <!-- List of all emoji's in buttons -->
+      <h4 class="recentText">Recent</h4>
+      <div class="recent-emoji"></div>
+      <h4>All</h4>
       <div class="emoji-list">
         <button>😀</button>
         <button>😃</button>
@@ -164,21 +166,33 @@
 
       font-weight: 800;
     }
-
+    .recent-emoji {
+      width: 95%;
+      display: flex;
+      flex-direction: row;
+    }
+    .main h4 {
+      width: 90%;
+      font-weight: 900;
+      text-align: left;
+      padding: 10px 0 5px 0;
+    }
     .main {
+      padding-top: 65px;
       width: 100%;
       max-height: 100%;
       flex: 5;
 
-      overflow-y: hidden;
-      display: flex;
-      flex-direction: row;
-
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+
+      border-left: 15px solid #a3b18a;
     }
     .main .emoji-list {
-      padding: 10px 0 50px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -186,18 +200,14 @@
 
       width: 100%;
       height: 100%;
-
-      overflow-y: scroll;
-
-      border-left: 15px solid #a3b18a;
     }
 
     /* Make scrollbar of .emoji-list the color: #a3b18a */
-    .emoji-list::-webkit-scrollbar {
+    .main::-webkit-scrollbar {
       width: 15px;
       background-color: #a3b18a;
     }
-    .emoji-list::-webkit-scrollbar-thumb {
+    .main::-webkit-scrollbar-thumb {
       background-color: #588157;
       height: 5px;
     }

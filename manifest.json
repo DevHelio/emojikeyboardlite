@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Emoji keyboard lite",
+    "description": "Copy + paste emoji faster then ever",
+    "version": "0.01",
+    "action": {
+      "default_popup": "board.html",
+      "default_icon": "crying.png"
+    },
+    "content_scripts": [
+      {
+        "js": ["/scripts/content.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
